@@ -1,0 +1,36 @@
+# --- Credentials: never commit ---
+# clasp stores OAuth tokens in ~/.clasprc.json (home folder, outside this repo).
+# These patterns protect you if a copy ends up here (e.g. `clasp login --creds`).
+.clasprc.json
+**/.clasprc.json
+client_secret*.json
+creds.json
+credentials*.json
+token*.json
+*.pem
+.env
+.env.*
+
+# Project-specific: links this folder to YOUR Apps Script project.
+# Not a secret, but personal. Copy .clasp.json.example to create it.
+.clasp.json
+
+# --- Real email data: never commit ---
+# Keep tests synthetic. Put any real exports here, they stay local.
+private/
+exports/
+*.csv
+*.xlsx
+*.eml
+*.mbox
+tests/fixtures/real/
+
+# --- Tooling ---
+node_modules/
+npm-debug.log*
+*.log
+.DS_Store
+.vscode/settings.json
+
+# Throwaway folder from `clasp create-script` / `clone-script` (see README)
+clasp-init/
